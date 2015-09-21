@@ -1,0 +1,95 @@
+{
+	"ImportPath": "github.com/appc/acpush",
+	"GoVersion": "go1.5.1",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/appc/spec/aci",
+			"Comment": "v0.7.1-17-g274cd4f",
+			"Rev": "274cd4f221f5421745727fc79729c235ad9ff121"
+		},
+		{
+			"ImportPath": "github.com/appc/spec/discovery",
+			"Comment": "v0.7.1-17-g274cd4f",
+			"Rev": "274cd4f221f5421745727fc79729c235ad9ff121"
+		},
+		{
+			"ImportPath": "github.com/appc/spec/pkg/device",
+			"Comment": "v0.7.1-17-g274cd4f",
+			"Rev": "274cd4f221f5421745727fc79729c235ad9ff121"
+		},
+		{
+			"ImportPath": "github.com/appc/spec/pkg/tarheader",
+			"Comment": "v0.7.1-17-g274cd4f",
+			"Rev": "274cd4f221f5421745727fc79729c235ad9ff121"
+		},
+		{
+			"ImportPath": "github.com/appc/spec/schema",
+			"Comment": "v0.7.1-17-g274cd4f",
+			"Rev": "274cd4f221f5421745727fc79729c235ad9ff121"
+		},
+		{
+			"ImportPath": "github.com/coreos/go-semver/semver",
+			"Rev": "d043ae190b3202550d026daf009359bb5d761672"
+		},
+		{
+			"ImportPath": "github.com/coreos/ioprogress",
+			"Rev": "4637e494fd9b23c5565ee193e89f91fdc1639bc0"
+		},
+		{
+			"ImportPath": "github.com/coreos/rkt/common",
+			"Comment": "v0.10.0-39-g621d40a",
+			"Rev": "621d40ac592488cb0d7f58c10e5d79fbd6d0505c"
+		},
+		{
+			"ImportPath": "github.com/coreos/rkt/rkt/config",
+			"Comment": "v0.10.0-39-g621d40a",
+			"Rev": "621d40ac592488cb0d7f58c10e5d79fbd6d0505c"
+		},
+		{
+			"ImportPath": "github.com/cpuguy83/go-md2man/md2man",
+			"Comment": "v1.0.4",
+			"Rev": "71acacd42f85e5e82f70a55327789582a5200a90"
+		},
+		{
+			"ImportPath": "github.com/inconshreveable/mousetrap",
+			"Rev": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+		},
+		{
+			"ImportPath": "github.com/russross/blackfriday",
+			"Comment": "v1.3-14-g4b26653",
+			"Rev": "4b26653fe00067c22322249d58654737e44b0dfb"
+		},
+		{
+			"ImportPath": "github.com/shurcooL/sanitized_anchor_name",
+			"Rev": "10ef21a441db47d8b13ebcc5fd2310f636973c77"
+		},
+		{
+			"ImportPath": "github.com/spf13/cobra",
+			"Rev": "83773614293e6c9406454a53ce5e263500ce6e44"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Rev": "08b1a584251b5b62f458943640fc8ebd4d50aaa5"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
+			"Rev": "c8b9e6388ef638d5a8a9d865c634befdc46a6784"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "e1a5816c9bfcaeceeaeb821e8eea1c61ecd3220e"
+		},
+		{
+			"ImportPath": "k8s.io/kubernetes/pkg/api/resource",
+			"Comment": "v1.2.0-alpha.2-449-g1524d74",
+			"Rev": "1524d7490a2dfbbcd2a98bcebd6518c06f3fbace"
+		},
+		{
+			"ImportPath": "speter.net/go/exp/math/dec/inf",
+			"Rev": "42ca6cd68aa922bc3f32f1e056e61b65945d9ad7"
+		}
+	]
+}

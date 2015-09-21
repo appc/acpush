@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/coreos/rkt/rkt/config"
-	"github.com/spf13/cobra"
+	"github.com/appc/acpush/Godeps/_workspace/src/github.com/coreos/rkt/rkt/config"
+	"github.com/appc/acpush/Godeps/_workspace/src/github.com/spf13/cobra"
 
 	"github.com/appc/acpush/lib"
 )
