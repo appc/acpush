@@ -15,6 +15,7 @@
 package main
 
 import (
+	"encoding/base64"
 	"fmt"
 	"net/http"
 	"os"
@@ -28,6 +29,8 @@ import (
 var (
 	flagDebug           bool
 	flagInsecure        bool
+	flagUser            string
+	flagPassword        string
 	flagSystemConfigDir string
 	flagLocalConfigDir  string
 
@@ -41,6 +44,8 @@ var (
 func init() {
 	cmdACPush.Flags().BoolVar(&flagDebug, "debug", false, "Enables debug messages")
 	cmdACPush.Flags().BoolVar(&flagInsecure, "insecure", false, "Permits unencrypted traffic")
+	cmdACPush.Flags().StringVar(&flagUser, "username", "", "HTTP Username")
+	cmdACPush.Flags().StringVar(&flagPassword, "password", "", "HTTP Password")
 	cmdACPush.Flags().StringVar(&flagSystemConfigDir, "system-conf", "/usr/lib/rkt", "Directory for system configuration")
 	cmdACPush.Flags().StringVar(&flagLocalConfigDir, "local-conf", "/etc/rkt", "Directory for local configuration")
 }
@@ -71,16 +76,22 @@ func runACPush(cmd *cobra.Command, args []string) {
 			if r.URL == nil {
 				return
 			}
-			headerer, ok := conf.AuthPerHost[r.URL.Host]
-			if !ok {
-				if flagDebug {
-					fmt.Fprintf(os.Stderr, "No auth present in config for domain %s.\n", r.URL.Host)
+			if flagUser != "" && flagPassword != "" {
+				creds := []byte(fmt.Sprintf("%s:%s", flagUser, flagPassword))
+				encodedCreds := base64.StdEncoding.EncodeToString(creds)
+				r.Header["Authorization"] = append(r.Header["Authorization"], "Basic "+encodedCreds)
+			} else {
+				headerer, ok := conf.AuthPerHost[r.URL.Host]
+				if !ok {
+					if flagDebug {
+						fmt.Fprintf(os.Stderr, "No auth present in config for domain %s.\n", r.URL.Host)
+					}
+					return
 				}
-				return
-			}
-			header := headerer.Header()
-			for k, v := range header {
-				r.Header[k] = append(r.Header[k], v...)
+				header := headerer.Header()
+				for k, v := range header {
+					r.Header[k] = append(r.Header[k], v...)
+				}
 			}
 		},
 	}.Upload()
