@@ -1,0 +1,14 @@
+package: github.com/appc/acpush
+import:
+- package: github.com/appc/spec
+  version: ~0.8.4
+  subpackages:
+  - aci
+  - discovery
+  - schema
+- package: github.com/coreos/ioprogress
+- package: github.com/coreos/rkt
+  version: ~1.8.0
+  subpackages:
+  - rkt/config
+- package: github.com/spf13/cobra
