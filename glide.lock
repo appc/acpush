@@ -1,0 +1,86 @@
+hash: 86c08b66aec7669f130749a91267600889234f2b364e8a068985e5d6bd051fe7
+updated: 2016-07-06T16:34:34.508280845+02:00
+imports:
+- name: github.com/appc/spec
+  version: fd5e3d8f5d596c6fbd506e80b5e13ba8a97b704c
+  subpackages:
+  - aci
+  - discovery
+  - schema
+  - pkg/tarheader
+  - schema/types
+  - schema/common
+  - pkg/device
+- name: github.com/aws/aws-sdk-go
+  version: 13a12060f716145019378a10e2806c174356b857
+  subpackages:
+  - aws
+  - aws/awserr
+  - aws/awsutil
+  - aws/client/metadata
+  - aws/credentials
+  - aws/request
+  - private/protocol/rest
+  - private/signer/v4
+- name: github.com/coreos/go-semver
+  version: 6fe83ccda8fb9b7549c9ab4ba47f47858bc950aa
+  subpackages:
+  - semver
+- name: github.com/coreos/ioprogress
+  version: 4637e494fd9b23c5565ee193e89f91fdc1639bc0
+- name: github.com/coreos/rkt
+  version: 5393f2e99b1ae3d3b6b232bf428dd15a88714663
+  subpackages:
+  - rkt/config
+  - common
+  - pkg/group
+- name: github.com/go-ini/ini
+  version: 12f418cc7edc5a618a51407b7ac1f1f512139df3
+- name: github.com/gogo/protobuf
+  version: 4168943e65a2802828518e95310aeeed6d84c4e5
+  subpackages:
+  - proto
+- name: github.com/hashicorp/errwrap
+  version: 7554cd9344cec97297fa6649b055a8c98c2a1e55
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/jmespath/go-jmespath
+  version: 0b12d6b521d83fc7f755e7cfc1b1fbdd35a01a74
+- name: github.com/spf13/cobra
+  version: 6a8bd97bdb1fc0d08a83459940498ea49d3e8c93
+- name: github.com/spf13/pflag
+  version: 08b1a584251b5b62f458943640fc8ebd4d50aaa5
+- name: go4.org
+  version: 03efcb870d84809319ea509714dd6d19a1498483
+  subpackages:
+  - errorutil
+- name: golang.org/x/crypto
+  version: a7ead6ddf06233883deca151dffaef2effbf498f
+  subpackages:
+  - cast5
+  - openpgp
+  - openpgp/armor
+  - openpgp/elgamal
+  - openpgp/errors
+  - openpgp/packet
+  - openpgp/s2k
+  - ssh/terminal
+- name: golang.org/x/net
+  version: c2528b2dd8352441850638a8bb678c2ad056fd3e
+  subpackages:
+  - context
+  - html
+  - html/atom
+  - http2
+  - http2/hpack
+  - internal/timeseries
+  - trace
+- name: gopkg.in/inf.v0
+  version: 3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4
+- name: k8s.io/kubernetes
+  version: 9990f843cd62caa90445cf76b07d63ba7b5c86fd
+  subpackages:
+  - pkg/api/resource
+  - pkg/conversion
+  - third_party/forked/reflect
+devImports: []
