@@ -1,8 +1,8 @@
 hash: 86c08b66aec7669f130749a91267600889234f2b364e8a068985e5d6bd051fe7
-updated: 2016-06-23T10:58:15.957043468+02:00
+updated: 2016-07-06T16:34:34.508280845+02:00
 imports:
 - name: github.com/appc/spec
-  version: f82c741e743001237821b5e0bb9a8ebd324d3117
+  version: fd5e3d8f5d596c6fbd506e80b5e13ba8a97b704c
   subpackages:
   - aci
   - discovery
@@ -83,4 +83,4 @@ imports:
   - pkg/api/resource
   - pkg/conversion
   - third_party/forked/reflect
-testImports: []
+devImports: []
